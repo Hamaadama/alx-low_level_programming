@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * main - Main function of c.
+ * main - Main function of C.
  *
  * Return: Always 0 (Succes).
  */
