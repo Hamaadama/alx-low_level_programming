@@ -2,7 +2,7 @@
 
 /**
  * main - function main of C
- * 
+ *
  * Return: ALways 0 (Success)
  */
 int main(void)
