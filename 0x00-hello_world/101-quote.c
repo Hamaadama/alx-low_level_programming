@@ -2,7 +2,7 @@
 #include<unistd.h>
 
 /**
- * main - Main function of C.
+ * main - function main of C.
  *
  * Return: Always 0 (Succes).
  */
