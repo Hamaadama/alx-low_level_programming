@@ -3,9 +3,9 @@
 
 /**
  * print_to_98 - prints numbers up to the number 98
- * @n: the number from which the printing begins.
+ * @n: the number from which the printing begins
  *
- * Return: void, the function just print no return.
+ * Return: void, the function just prints no return
  */
 
 void print_to_98(int n)
