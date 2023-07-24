@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * print_times_table - prints a times table
- * @n: we will print an n to n times table.
+ * print_times_table - prints a timetable
+ * @n: we will print an n to n times table
  *
  * Return: void, nothing just do the printing
  */
