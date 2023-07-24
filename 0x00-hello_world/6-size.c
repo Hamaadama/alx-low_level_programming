@@ -1,7 +1,7 @@
 #include<stdio.h>
 
 /**
- * main - Main function of C.
+ * main - function main of C.
  *
  * Return: Always 0 (Succes).
  */
@@ -13,5 +13,6 @@ int main(void)
 	printf("Size of a long int: %d byte(s)\n", sizeof(long int));
 	printf("Size of a long long int: %d byte(s)\n", sizeof(long long));
 	printf("Size of a float: %d byte(s)\n", sizeof(float));
+	
 	return (0);
 }
