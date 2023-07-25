@@ -3,7 +3,7 @@
 /**
  * puts2 - print 1 out of 2 character
  * of a string starting by the first.
- * @str: string to be considered 
+ * @str: string to be considered
  *
  * Return: void, nothing just print
  */
