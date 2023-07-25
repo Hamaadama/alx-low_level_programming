@@ -2,7 +2,7 @@
 
 /**
  * more_numbers - print 10x digit 0-14
- * 
+ *
  * Return: void, nothing just printing
  */
 
