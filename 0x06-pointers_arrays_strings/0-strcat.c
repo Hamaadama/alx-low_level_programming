@@ -2,32 +2,30 @@
 
 /**
  * _strcat - concatenates two strings
- * @dest: the destination string
- * @src: the source string to append to dest
- *
- * Return: pointer to the resulting string dest
+ * @dest: destination.
+ * @src: source.
+ * Return: the pointer to dest.
  */
+
 char *_strcat(char *dest, char *src)
 {
-    int dest_len = 0;
-    int src_index = 0;
+    int count = 0, count2 = 0;
 
-    // Finding the length of the destination string
-    while (dest[dest_len] != '\0')
+    // Find the length of the destination string
+    while (*(dest + count) != '\0')
     {
-        dest_len++;
+        count++;
     }
 
-    // Appending source to destination
-    while (src[src_index] != '\0')
+    // Append source string to destination string
+    while (count2 >= 0)
     {
-        dest[dest_len] = src[src_index];
-        dest_len++;
-        src_index++;
+        *(dest + count) = *(src + count2);
+        if (*(src + count2) == '\0')
+            break;
+        count++;
+        count2++;
     }
-
-    // Adding the null terminator at the end
-    dest[dest_len] = '\0';
 
     return dest;
 }
