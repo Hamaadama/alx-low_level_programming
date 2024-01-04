@@ -9,25 +9,25 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	int dest_len = 0;
-	int i = 0;
+    int dest_len = 0;
+    int src_index = 0;
 
-	/* Calculate length of dest string */
-	while (dest[dest_len] != '\0')
-	{
-		dest_len++;
-	}
+    // Finding the length of the destination string
+    while (dest[dest_len] != '\0')
+    {
+        dest_len++;
+    }
 
-	/* Append src to dest */
-	while (src[i] != '\0')
-	{
-		dest[dest_len] = src[i];
-		dest_len++;
-		i++;
-	}
+    // Appending source to destination
+    while (src[src_index] != '\0')
+    {
+        dest[dest_len] = src[src_index];
+        dest_len++;
+        src_index++;
+    }
 
-	/* Null terminate dest */
-	dest[dest_len] = '\0';
+    // Adding the null terminator at the end
+    dest[dest_len] = '\0';
 
-	return (dest);
+    return dest;
 }
