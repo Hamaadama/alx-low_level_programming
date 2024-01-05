@@ -3,37 +3,31 @@
 /**
  * cap_string - Capitalizes all words of a string.
  *
- * @str: The input string.
+ * @s: Input string.
  *
- * Return: A pointer to the modified string.
+ * Return: A pointer to dest.
  */
-
-char *cap_string(char *str)
+char *cap_string(char *s)
 {
-	int i = 0;
+	int count = 0, i;
+	int sep_words[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
 
-	while (str[i] != '\0')
+	if (*(s + count) >= 97 && *(s + count) <= 122)
+		*(s + count) = *(s + count) - 32;
+	count++;
+	while (*(s + count) != '\0')
 	{
-		if (i == 0 || str[i - 1] == ' ' || str[i - 1] == '\t' || str[i - 1] == '\n'
-			|| str[i - 1] == ',' || str[i - 1] == ';' || str[i - 1] == '.'
-			|| str[i - 1] == '!' || str[i - 1] == '?' || str[i - 1] == '"'
-			|| str[i - 1] == '(' || str[i - 1] == ')' || str[i - 1] == '{'
-			|| str[i - 1] == '}')
+		for (i = 0; i < 13; i++)
 		{
-			if (str[i] >= 'a' && str[i] <= 'z')
+			if (*(s + count) == sep_words[i])
 			{
-				str[i] = str[i] - 'a' + 'A';
+				if ((*(s + (count + 1)) >= 97) && (*(s + (count + 1)) <= 122))
+					*(s + (count + 1)) = *(s + (count + 1)) - 32;
+				break;
 			}
 		}
-		else
-		{
-			if (str[i] >= 'A' && str[i] <= 'Z')
-			{
-				str[i] = str[i] + 'a' - 'A';
-			}
-		}
-		i++;
+		count++;
 	}
 
-	return (str);
+	return (s);
 }
