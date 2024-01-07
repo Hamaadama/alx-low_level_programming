@@ -6,30 +6,29 @@
  * @dest: The destination string.
  * @src: The source string.
  *
- * Return: A pointer to the resulting string @dest.
+ * Return: A pointer to the resulting string (dest).
  */
+
 char *_strcat(char *dest, char *src)
 {
-    int dest_len = 0, src_len = 0;
-    int i;
+	int i = 0, j = 0;
 
-    /* Calculate the length of the destination string */
-    while (dest[dest_len] != '\0')
-    {
-        dest_len++;
-    }
+	/* Find the end of the destination string */
+	while (*(dest + i) != '\0')
+	{
+		i++;
+	}
 
-    /* Calculate the length of the source string */
-    while (src[src_len] != '\0')
-    {
-        src_len++;
-    }
+	/* Append source string to destination string */
+	while (*(src + j) != '\0')
+	{
+		*(dest + i) = *(src + j);
+		i++;
+		j++;
+	}
 
-    /* Copy the characters from src to dest */
-    for (i = 0; i <= src_len; i++)
-    {
-        dest[dest_len + i] = src[i];
-    }
+	/* Add null terminator to the end of the concatenated string */
+	*(dest + i) = '\0';
 
-    return dest;
+	return (dest);
 }
